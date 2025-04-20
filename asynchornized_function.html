@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>asychonized function</h1>
+    <p id="result"></p>
+    <script>
+        async function add(a,b){
+            var addition = a + b
+            display(addition)
+        }
+        function display(add){
+            document.getElementById("result").innerHTML  = add
+        };
+        add(12,5)
+
+    </script>
+</body>
+</html>
