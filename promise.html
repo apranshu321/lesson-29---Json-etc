@@ -16,24 +16,20 @@
             var sum = a+b
             mydisplay(sum)
         }
-        var mypromise = new promise(function(myResolve,myReject){
+        var mypromise = new Promise(function(myResolve,myReject){
             var x = 0;
             if (x==0){
-                myResolve("ok")
+                myResolve("ok");
             }
             else{
-                myReject("no")
+                myReject("no");
             }
 
-        })
+        });
         mypromise.then(
-            function(value){
-                sum(5,5)
-            },
-            function(error){
-                sum(error)
-            }
-        )
+            function(value){sum(5,5);},
+            function(error){sum(error);}
+        );
     </script>
 </body>
 </html>
