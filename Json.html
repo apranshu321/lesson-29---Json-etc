@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <p id="result"></p>
+<script>
+var nameobj = {name:"pranshu" , age: 14 }
+var nameobjstr = JSON.stringify(nameobj)
+var nameobjstrnew = JSON.parse(nameobjstr)
+document.getElementById("result").innerHTML = nameobjstrnew.age
+
+
+</script>
+</body>
+</html>
