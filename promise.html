@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise</h1>
+    <p id="result"></p>
+    <script>
+        function mydisplay(value){
+            document.getElementById("result").innerHTML = value
+        }
+        function sum(a,b){
+            var sum = a+b
+            mydisplay(sum)
+        }
+        var mypromise = new promise(function(myResolve,myReject){
+            var x = 0;
+            if (x==0){
+                myResolve("ok")
+            }
+            else{
+                myReject("no")
+            }
+
+        })
+        mypromise.then(
+            function(value){
+                sum(5,5)
+            },
+            function(error){
+                sum(error)
+            }
+        )
+    </script>
+</body>
+</html>
